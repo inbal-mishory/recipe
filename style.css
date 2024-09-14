@@ -14,50 +14,72 @@ html, body {
 
 main {
     display: grid;
-    grid-template-columns: 648px 1fr;
-    width: 1440px;
+    grid-template-columns: 45% 55%;
+    width: min(1440px, 96vw);
     margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+    main {
+        width: min(1000px, 98vw);
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    main {
+        width: min(1280px, 96vw);
+    }
 }
 
 section.image {
     grid-column: 1/2;
 }
 
+@media screen and (max-width: 1024px) {
+    .image img {
+        height: 982px;
+    }
+}
+
+.details {
+  background: #fff;
+}
+
 .meta {
-    transform: translate3d(-202px, 100px, 0);
+    transform: translate3d(-27%, 54%, 0);
     background: #fff;
-    width: 744px;
-    height: 184px;
-    padding-left: 48px;
+    width: min(100%, 744px);
+    height: 18.4rem;
+    padding-left: 4.8rem;
 }
 
 h2.title {
     margin: 0;
-    font-size: 48px;
+    font-size: 4.8rem;
     font-weight: 700;
 }
 
 .rating {
     padding-top: 24px;
     display: grid;
-    grid-template-columns: 145px 1fr;
-    gap: 6px;
-    height: 48px;
+    grid-template-columns: 14.5rem 1fr;
+    gap: .6rem;
+    height: 4.8rem;
 }
 
 .voters {
-    font-size:14px;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 
 .stars {
     color: #f6a522;
     display: flex;
-    gap: 6px;
+    gap: .6rem;
 
     img {
-        width: 22px;
-        height:22px;
+        width: 2.4rem;
+        height: 2.4rem;
     }
 }
 
@@ -66,66 +88,57 @@ h2.title {
     align-items: center;
 }
 
-.star.material-symbols-outlined {
-    font-size: 24px;
-}
-
-.star.material-symbols-outlined.full {
-    font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 48;
-    font-size: 22px;
-}
-
 .recipe-properties {
     transform: translateY(120px);
-    padding-left: 42px;
+    padding-left: 4.2rem;
     display: grid;
     row-gap: 24px;
 }
 
 .infographic {
     display: grid;
-    grid-template-columns: 124px 123px 100px;
-    column-gap: 4px;
+    grid-template-columns: 12.4rem 12.3rem 10rem;
+    column-gap: .4rem;
 }
 
 .time, .level, .budget {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    column-gap: 4px;
-    grid-template-rows: 16px 3fr;
+    column-gap: .4rem;
+    grid-template-rows: 1.6rem 3fr;
 }
 
 .time {
-    grid-template-columns: 37px 4fr;
+    grid-template-columns: 3.7rem 4fr;
 }
 
 .level {
-    grid-template-columns: 32px 4fr;
+    grid-template-columns: 3.2rem 4fr;
 }
 
 .time .timer,
 .level .ribbon,
 .budget .wallet{
     grid-row: 1 / 3;
-    font-size: 23px;
+    font-size: 2.3rem;
     display: flex;
     align-items: center;
 }
 
 .infographic .title {
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 400;
 }
 
 .infographic .text{
     color: #e2a72a;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 700;
     grid-column: 2/3;
 }
 
 .blurb {
-    font-size:18px;
+    font-size:1.8rem;
     font-style: italic;
     font-weight: 400;
 }
@@ -136,19 +149,19 @@ h2.title {
 }
 
 .ingredients {
-    padding-top: 43px;
+    padding-top: 4.3rem;
 }
 
 h3 {
     margin: 0;
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 ul {
     list-style-type: none;
     padding-inline-start: 0;
     padding-block-start: 2rem;
-    font-size: 18px;
+    font-size: 1.8rem;
     display: grid;
     row-gap: 14px;
 }
@@ -156,18 +169,18 @@ ul {
 ul li {
     display: flex;
     align-items: center;
-    gap:14px
+    gap:1.4rem
 }
 
 input[type="checkbox"] {
     color: #fff;
     accent-color: #fa9a06;
-    width: 16px;
-    height: 16px;
+    width: 1.6rem;
+    height: 1.6rem;
 }
 
 .instructions {
-    padding-top: 12px;
+    padding-top: 1.2remx;
 
     h3 {
         padding-bottom: 2rem;
@@ -175,24 +188,24 @@ input[type="checkbox"] {
 }
 
 ol {
-    padding-inline-start: 22px;
-    font-size: 10px;
+    padding-inline-start: 2.2rem;
+    font-size: 1rem;
     max-width: 73rem;
 }
 
 ol li {
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 1.7;
 }
 
 .product-name-footer {
     color: #fff;
     background: #000;
-    transform: translate3d(-690px, -22px, 0);
-    width: 296px;
-    padding: 16px 0 8px 20px;
-    font-size: 18px;
+    transform: translate3d(0, -102px, 0);
+    width: 29.6rem;
+    padding: 1.6rem 0 .8rem 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
     line-height: 1.2;
-    height: 78px;
+    height: 7.8rem;
 }
