@@ -10,6 +10,12 @@ html, body {
     font-family: "Ubuntu", sans-serif;
     font-size: 10px;
 }
+
+@media screen and (max-width: 1024px) {
+    html, body {
+    font-size: 8px;
+    }
+}
   
 
 main {
@@ -19,17 +25,6 @@ main {
     margin: 0 auto;
 }
 
-@media screen and (max-width: 1024px) {
-    main {
-        width: min(1000px, 98vw);
-    }
-}
-
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
-    main {
-        width: min(1280px, 96vw);
-    }
-}
 
 section.image {
     grid-column: 1/2;
@@ -53,6 +48,7 @@ section.image {
     padding-left: 4.8rem;
 }
 
+
 h2.title {
     margin: 0;
     font-size: 4.8rem;
@@ -67,6 +63,13 @@ h2.title {
     height: 4.8rem;
 }
 
+@media screen and (max-width: 1024px) {
+    .rating {
+        padding-top: 16px;
+        height: 38px;
+    }
+}
+
 .voters {
     font-size: 1.4rem;
     font-weight: bold;
@@ -75,7 +78,7 @@ h2.title {
 .stars {
     color: #f6a522;
     display: flex;
-    gap: .6rem;
+    gap: .4rem;
 
     img {
         width: 2.4rem;
@@ -180,7 +183,7 @@ input[type="checkbox"] {
 }
 
 .instructions {
-    padding-top: 1.2remx;
+    padding-top: 1rem;
 
     h3 {
         padding-bottom: 2rem;
